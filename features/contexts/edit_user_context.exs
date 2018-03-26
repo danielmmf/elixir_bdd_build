@@ -1,10 +1,14 @@
 defmodule GherkinTests.Contexts.EditUser do
   use WhiteBread.Context
 
+  alias PhoenixCore.User
+
 	given_ ~r/^I register a new user called "(?<name>[^"]+)"$/,
 	  fn state, %{name: name} ->
-	
-    	{:ok, state}
+
+		user_details = %{name: name}
+		changeset = User.changeset(%User{}, user_details)
+		{:ok, assert changeset.valid? }
 	end
 
 	and_ ~r/^I change their "(?<argument_one>[^"]+)" to "(?<argument_two>[^"]+)"$/,

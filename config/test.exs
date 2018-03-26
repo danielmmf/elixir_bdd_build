@@ -13,5 +13,5 @@ config :logger, level: :warn
 # Configure your database
 config :phoenix_core, PhoenixCore.Repo,
   adapter: Sqlite.Ecto2,
-  database: "db/dev.sqlite",
+  database: "db/tests.sqlite",
   pool: Ecto.Adapters.SQL.Sandbox  
