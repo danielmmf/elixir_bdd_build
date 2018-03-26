@@ -18,8 +18,7 @@ defmodule PhoenixCore.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {PhoenixCore, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,:white_bread,
-                    :phoenix_ecto]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,:white_bread,:phoenix_ecto]]
   end
 
   # Specifies which paths to compile per environment.

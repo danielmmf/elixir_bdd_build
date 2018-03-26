@@ -1,7 +1,7 @@
 defmodule WhiteBreadConfig do
   use WhiteBread.SuiteConfiguration
 
-  suite name:          "All",
-        context:       WhiteBreadContext,
-        feature_paths: ["features/"]
+   suite name:          "Edit User",
+        context:       GherkinTests.Contexts.EditUser,
+        feature_paths: ["features/edit_user.feature"]    
 end

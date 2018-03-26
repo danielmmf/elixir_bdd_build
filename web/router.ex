@@ -19,6 +19,7 @@ defmodule PhoenixCore.Router do
     get "/", PageController, :index
   end
 
+  resources "/users", UserController, except: [:new, :edit]
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixCore do
   #   pipe_through :api
