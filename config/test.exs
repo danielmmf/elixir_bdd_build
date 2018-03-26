@@ -5,15 +5,13 @@ use Mix.Config
 config :phoenix_core, PhoenixCore.Endpoint,
   http: [port: 4001],
   server: false
+ 
 
 # Print only warnings and errors during test
 config :logger, level: :warn
 
 # Configure your database
 config :phoenix_core, PhoenixCore.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "phoenix_core_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+  adapter: Sqlite.Ecto2,
+  database: "db/dev.sqlite",
+  pool: Ecto.Adapters.SQL.Sandbox  

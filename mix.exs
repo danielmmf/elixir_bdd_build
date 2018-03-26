@@ -18,7 +18,7 @@ defmodule PhoenixCore.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {PhoenixCore, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,:white_bread,
                     :phoenix_ecto]]
   end
 
@@ -37,6 +37,7 @@ defmodule PhoenixCore.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:sqlite_ecto2, "~> 2.2.1"},
+     {:white_bread, "~> 3.1", only: [:dev, :test]},
      {:cowboy, "~> 1.0"}]
   end
 
